@@ -2,11 +2,30 @@
 import { Link } from 'react-router-dom';
 import img from '../../assets/login.svg'
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useAuth from '../../hooks/useAuth';
+import toast from 'react-hot-toast';
 const Login = () => {
 
 const handleLogin = event =>{
   event.preventDefault();
+
+
+      // get field values
+      const email =event.target.email.value;
+      const password =event.target.password.value;
+  
+      // validation
+      if(password.length < 6){
+  toast.error('Password must be at least 6 Charecters');
+      }
+  
+      // creating a new user 
+     signin(email,password)
+      .then(res => console.log(res.user))
+     .catch(error  => console.log(error))
 }
+
+const {signin} =useAuth();
 
   return (
     <div className="hero min-h-screen bg-base-200">
