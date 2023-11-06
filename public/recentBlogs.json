@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      "_id": 1,
       "title": "Exploring Ancient Ruins",
       "image": "https://i.ibb.co/8B4YMMd/img-5.jpg",
       "short_description": "Journey back in time to unravel the mysteries of ancient civilizations.",
@@ -8,15 +8,15 @@
       "category": "History & Archaeology"
     },
     {
-      "id": 2,
+      "_id": 2,
       "title": "Mastering the Art of Photography",
-      "image": "https://i.ibb.co/gzpdBbP/img-21.jpg",
+      "image": "https://i.ibb.co/kBCfrBC/img-7.jpg",
       "short_description": "Capture moments that last a lifetime with expert photography tips.",
       "long_description": "Dive into the world of photography and learn how to create stunning visual stories. Our guide covers essential techniques, from composition and lighting to post-processing, helping you take your photography to the next level.",
       "category": "Art & Photography"
     },
     {
-      "id": 3,
+      "_id": 3,
       "title": "Healthy Eating: A Balanced Approach",
       "image": "https://i.ibb.co/JRpnwn0/img-14.jpg",
       "short_description": "Discover the keys to maintaining a balanced diet and a healthier lifestyle.",
@@ -24,7 +24,7 @@
       "category": "Health & Nutrition"
     },
     {
-      "id": 4,
+      "_id": 4,
       "title": "Wanderlust: The Joy of Solo Travel",
       "image": "https://i.ibb.co/hXxf8kd/img-20.jpg",
       "short_description": "Embrace the world and discover the freedom of solo travel.",
@@ -32,7 +32,7 @@
       "category": "Travel"
     },
     {
-      "id": 5,
+      "_id": 5,
       "title": "The Power of Renewable Energy",
       "image": "https://i.ibb.co/CnPC0cz/img-11.jpg",
       "short_description": "Explore the sustainable solutions of renewable energy sources.",
@@ -40,7 +40,7 @@
       "category": "Environment & Sustainability"
     },
     {
-      "id": 6,
+      "_id": 6,
       "title": "Culinary Adventures: A Tour of Regional Cuisines",
       "image": "https://i.ibb.co/sQ5T0qQ/img-8.jpg",
       "short_description": "Savor the diversity of flavors from around the world.",

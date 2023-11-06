@@ -17,10 +17,10 @@ const Banner = () => {
           </div>
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">
-          <a href="#slide4" className="btn btn-circle  mr-5">
+          <a href="#slide4" className="btn btn-circle bg-purple-300  mr-5">
             ❮
           </a>
-          <a href="#slide2" className="btn btn-circle">
+          <a href="#slide2" className="btn btn-circle bg-purple-300">
             ❯
           </a>
         </div>
@@ -29,15 +29,15 @@ const Banner = () => {
         <img src={img2} className="w-full" />
         <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
           <div className="text-white pl-12 space-y-7 w-1/2">
-            <h2 className="text-6xl font-bold">Explore Life's Adventures</h2>
+            <h2 className="text-6xl font-bold">Explore Life is Adventures</h2>
             <p>Travel, Food, and Stories from Around the World.</p>
           </div>
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">
-          <a href="#slide1" className="btn btn-circle mr-5">
+          <a href="#slide1" className="btn btn-circle bg-purple-300 mr-5">
             ❮
           </a>
-          <a href="#slide3" className="btn btn-circle">
+          <a href="#slide3" className="btn btn-circle bg-purple-300">
             ❯
           </a>
         </div>
@@ -51,10 +51,10 @@ const Banner = () => {
           </div>
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">
-          <a href="#slide2" className="btn btn-circle mr-5">
+          <a href="#slide2" className="btn btn-circle bg-purple-300 mr-5">
             ❮
           </a>
-          <a href="#slide4" className="btn btn-circle">
+          <a href="#slide4" className="btn btn-circle bg-purple-300">
             ❯
           </a>
         </div>
@@ -68,10 +68,10 @@ const Banner = () => {
           </div>
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">
-          <a href="#slide3" className="btn btn-circle  mr-5">
+          <a href="#slide3" className="btn btn-circle bg-purple-300  mr-5">
             ❮
           </a>
-          <a href="#slide1" className="btn btn-circle">
+          <a href="#slide1" className="btn btn-circle bg-purple-300">
             ❯
           </a>
         </div>

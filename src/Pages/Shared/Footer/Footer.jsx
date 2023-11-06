@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content">
+    <footer className="footer p-10 bg-slate-600 text-white">
       <aside>
       <img className="w-20 h-20" src="https://i.ibb.co/QNH20N6/pngtree-cool-red-wings-logo-png-image-7129340.png" alt="" />
-        <p>
+        <p className="font-bold">
          CHAPTER
           <br />
           Providing reliable tech since 1992
