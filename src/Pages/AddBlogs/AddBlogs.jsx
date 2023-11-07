@@ -1,19 +1,37 @@
 const AddBlogs = () => {
-
-const handleAddBlog =event => {
+  const handleAddBlog = (event) => {
     event.preventDefault();
 
-    const form= event.target;
-    const title =form.title.value;
-    const category =form.category.value;
-    const date =form.date.value;
-    const shortDescription =form.shortDescription.value;
-    const longDescription =form.longDescription.value;
-    const photoUrl =form.photoUrl.value;
-const newBlog ={ title,category,date,shortDescription,longDescription,photoUrl}
-console.log(newBlog)
+    const form = event.target;
+    const title = form.title.value;
+    const category = form.category.value;
+    const date = form.date.value;
+    const shortDescription = form.shortDescription.value;
+    const longDescription = form.longDescription.value;
+    const photoUrl = form.photoUrl.value;
+    const newBlog = {
+      title,
+      category,
+      date,
+      shortDescription,
+      longDescription,
+      photoUrl,
+    };
+    console.log(newBlog);
 
-}
+    // send data to the server
+    fetch('http://localhost:5000/blog',{
+        method:'POST',
+        headers:{
+            'content-type': 'application/json'
+        },
+        body:JSON.stringify(newBlog)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+  };
 
   return (
     <div className="bg-purple-300 p-24">
@@ -27,7 +45,7 @@ console.log(newBlog)
             </label>
             <label className="input-group">
               <input
-              name="title"
+                name="title"
                 type="text"
                 placeholder="Blog Title"
                 className="input input-bordered w-full"
@@ -40,7 +58,7 @@ console.log(newBlog)
             </label>
             <label className="input-group">
               <input
-              name="category"
+                name="category"
                 type="text"
                 placeholder="Photo URL"
                 className="input input-bordered w-full"
@@ -56,7 +74,7 @@ console.log(newBlog)
             </label>
             <label className="input-group">
               <input
-              name="shortDescription"
+                name="shortDescription"
                 type="text"
                 placeholder="Short Description"
                 className="input input-bordered w-full"
@@ -69,7 +87,7 @@ console.log(newBlog)
             </label>
             <label className="input-group">
               <input
-              name="longDescription"
+                name="longDescription"
                 type="text"
                 placeholder="Long Description"
                 className="input input-bordered w-full"
@@ -85,7 +103,7 @@ console.log(newBlog)
             </label>
             <label className="input-group">
               <input
-              name="date"
+                name="date"
                 type="date"
                 className="input input-bordered w-full"
               />
@@ -97,7 +115,7 @@ console.log(newBlog)
             </label>
             <label className="input-group">
               <input
-              name="photoUrl"
+                name="photoUrl"
                 type="text"
                 placeholder="Photo URL"
                 className="input input-bordered w-full"
@@ -105,7 +123,11 @@ console.log(newBlog)
             </label>
           </div>
         </div>
-        <input className="btn btn-block bg-purple-400" type="submit" value="Add Blog" />
+        <input
+          className="btn btn-block bg-purple-400"
+          type="submit"
+          value="Add Blog"
+        />
       </form>
     </div>
   );
