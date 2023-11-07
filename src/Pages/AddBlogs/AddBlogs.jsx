@@ -66,12 +66,27 @@ const AddBlogs = () => {
               <span className="label-text">Category</span>
             </label>
             <label className="input-group">
-              <input
+              {/* <input
                 name="category"
-                type="text"
+                type="select" 
                 placeholder="Category"
                 className="input input-bordered w-full"
-              />
+              /> */}
+              <select  className='input input-bordered w-full ' name="category" id='blogs'>
+                <option value=""> </option>
+                <option value="Fitness"> Fitness</option>
+                <option value="Travel"> Travel</option>
+                <option value="Photography"> Photography</option>
+                <option value="Health & Wellness"> Health & Wellness</option>
+                <option value="Home Improvement"> Home Improvement</option>
+                <option value="Science & Environment">Science & Environment</option>
+                <option value="Technology"> Technology
+l</option>
+                <option value="Writing & Literature"> Writing & Literature</option>
+                <option value="Food & Cooking"> Food & Cooking</option>
+                <option value="History"> History</option>
+                
+              </select>
             </label>
           </div>
         </div>
