@@ -5,9 +5,13 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import AddBlogs from "../Pages/AddBlogs/AddBlogs";
+import PageDetails from "../Pages/PageDetails/PageDetails";
+import UpdateBlogs from "../Pages/UpdateBlogs/UpdateBlogs";
 
 const router = createBrowserRouter([
     {
+        
       path: "/",
       element: <Main></Main>,
       errorElement:<ErrorPage></ErrorPage>,
@@ -24,8 +28,21 @@ const router = createBrowserRouter([
             path:'/signUp',
             element:<SignUp></SignUp>
         },
-      ]
+        {
+            path:'/pageDetails/:id',
+            element:<PageDetails></PageDetails>,
+        },
+      
+      ],  
     },
+    {
+        path:'/addBlog',
+        element:<AddBlogs></AddBlogs>
+    },
+      {
+        path:'/updateBlog',
+        element:<UpdateBlogs></UpdateBlogs>
+    }
   ]);
 
 
