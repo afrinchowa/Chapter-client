@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const AllBlogsCard = ({blog}) => {
-    const { title, image, short_description, category } = blog;
+    const { _id, title, image, short_description, category } = blog;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
@@ -16,6 +16,8 @@ const AllBlogsCard = ({blog}) => {
           <div className="card-actions">
           <Link to="/pageDetails">
           <button className="btn bg-purple-400">Details</button></Link>
+       
+          <Link to={`updateCoffee/${_id}`}><button className="btn bg-purple-400">Update</button></Link>
             <button className="btn bg-purple-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

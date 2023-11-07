@@ -1,4 +1,9 @@
+import Swal from "sweetalert2";
+
 const NewsLetter = () => {
+
+
+  
   return (
     <div className="text-center p-20  bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-purple-400  border-[180px] border-purple-900">
       <h1 className="text-4xl text-purple-800 font-bold mb-4">NEWSLETTER</h1>
