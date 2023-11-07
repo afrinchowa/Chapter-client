@@ -80,8 +80,7 @@ const AddBlogs = () => {
                 <option value="Health & Wellness"> Health & Wellness</option>
                 <option value="Home Improvement"> Home Improvement</option>
                 <option value="Science & Environment">Science & Environment</option>
-                <option value="Technology"> Technology
-l</option>
+                <option value="Technology"> Technology</option>
                 <option value="Writing & Literature"> Writing & Literature</option>
                 <option value="Food & Cooking"> Food & Cooking</option>
                 <option value="History"> History</option>

@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 
 const AllBlogsCard = ({blog}) => {
-    const { _id, title, image, short_description, category } = blog;
+    const { _id, title, photoUrl, short_description, category } = blog;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
-          <img src={image} alt="Photos" className="rounded-xl" />
+          <img src={photoUrl} alt="Photos" className="rounded-xl" />
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title font-bold text-purple-800">{title}</h2>
@@ -17,7 +17,7 @@ const AllBlogsCard = ({blog}) => {
           <Link to="/pageDetails">
           <button className="btn bg-purple-400">Details</button></Link>
        
-          <Link to={`updateCoffee/${_id}`}><button className="btn bg-purple-400">Update</button></Link>
+          <Link to={`updateBlogs/${_id}`}><button className="btn bg-purple-400">Update</button></Link>
             <button className="btn bg-purple-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

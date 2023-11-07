@@ -13,56 +13,53 @@ import FeaturedBlogs from "../Pages/FeaturedBlogs/FeaturedBlogs";
 import WishList from "../Pages/WishList/WishList";
 
 const router = createBrowserRouter([
-    {
-        
-      path: "/",
-      element: <Main></Main>,
-      errorElement:<ErrorPage></ErrorPage>,
-      
-      children: [
-        {
-            path:'/',
-            element:<Home></Home>
-        },
-        {
-            path:'/login',
-            element:<Login></Login>
-        },
-        {
-            path:'/signUp',
-            element:<SignUp></SignUp>
-        },
-        {
-            path:'/pageDetails/:id',
-            element:<PageDetails></PageDetails>,
-        },
-      
-      ],  
-    },
-    {
-        path:'/addBlog',
-        element:<AddBlogs></AddBlogs>
-       
-    },
-      {
-        path:'/updateBlog',
-        element:<UpdateBlogs></UpdateBlogs>,
-        loader: ({params}) => fetch(`http://localhost:5000/blog/${params.id}`)
-    },
-      {
-        path:'/allBlogs',
-        element:<AllBlogs></AllBlogs>,
-        loader: () => fetch('http://localhost:5000/blog')
-    },
-      {
-        path:'/featuredBlogs',
-        element:<FeaturedBlogs></FeaturedBlogs>
-    },
-      {
-        path:'/wishList',
-        element:<WishList></WishList>
-    },
-  ]);
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
 
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/pageDetails/:id",
+        element: <PageDetails></PageDetails>,
+      },
+    ],
+  },
+  {
+    path: "/addBlog",
+    element: <AddBlogs></AddBlogs>,
+  },
 
-  export default router;
+  {
+    path: "/allBlogs",
+    element: <AllBlogs></AllBlogs>,
+    loader: () => fetch("http://localhost:5000/blog"),
+  },
+  {
+    path: "/allBlogs/updateBlogs/:id",
+    element: <UpdateBlogs></UpdateBlogs>,
+    loader:({params}) =>fetch(`http://localhost:5000/blog/${params.id}`)
+  },
+  {
+    path: "/featuredBlogs",
+    element: <FeaturedBlogs></FeaturedBlogs>,
+  },
+  {
+    path: "/wishList",
+    element: <WishList></WishList>,
+  },
+]);
+
+export default router;
