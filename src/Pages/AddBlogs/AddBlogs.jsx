@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2'
+
 const AddBlogs = () => {
   const handleAddBlog = (event) => {
     event.preventDefault();
@@ -30,6 +32,13 @@ const AddBlogs = () => {
     .then(res => res.json())
     .then(data => {
         console.log(data)
+        if(data.insertedId){
+            Swal.fire({
+                title: "Good job!",
+                text: "Blog Added Successfully!",
+                icon: "success"
+              });
+        }
     })
   };
 
@@ -60,7 +69,7 @@ const AddBlogs = () => {
               <input
                 name="category"
                 type="text"
-                placeholder="Photo URL"
+                placeholder="Category"
                 className="input input-bordered w-full"
               />
             </label>
@@ -70,7 +79,7 @@ const AddBlogs = () => {
         <div className="md:flex mb-8 ">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">Title</span>
+              <span className="label-text">Short Description </span>
             </label>
             <label className="input-group">
               <input
@@ -99,7 +108,7 @@ const AddBlogs = () => {
         <div className="md:flex mb-8 ">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">Date</span>
+              <span className="label-text">Posted Date</span>
             </label>
             <label className="input-group">
               <input
