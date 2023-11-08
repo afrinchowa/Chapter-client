@@ -1,8 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Here is 5 bullet points explaining 5 project:
+1.This is a Website over different kinds of blogs .
+2.Each  have a title, image, short description, category, details button and wishlist button.
+3. Clicking the details button user will navigate to blog details page 
+4.Blog Details page will have all the information about the blog like title,image,short description, long description 
+5.1.	Here is a form which will take blog information like title,image url,category,short description, long description and a submit button.
