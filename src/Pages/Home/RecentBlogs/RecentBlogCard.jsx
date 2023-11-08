@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const RecentBlogCard = ({ blog }) => {
-  const { title, image, short_description, category } = blog;
+  const { title, image, shortDescription, category } = blog;
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
@@ -9,7 +9,7 @@ const RecentBlogCard = ({ blog }) => {
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title font-bold text-purple-800">{title}</h2>
-        <p>{short_description}</p>
+        <p>{shortDescription}</p>
         <h3 className="text-xl font-semibold text-purple-600">{category}</h3>
         <div className="card-actions">
         <Link to="/pageDetails">

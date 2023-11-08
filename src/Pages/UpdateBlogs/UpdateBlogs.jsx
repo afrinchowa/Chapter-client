@@ -1,7 +1,7 @@
 
 
 import { useLoaderData } from "react-router-dom";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 
 const UpdateBlogs = () => {
@@ -14,15 +14,15 @@ const UpdateBlogs = () => {
           const title = form.title.value;
           const category = form.category.value;
           const date = form.date.value;
-          const short_description = form.shortDescription.value;
-          const long_description = form.longDescription.value;
+          const shortDescription = form.shortDescription.value;
+          const longDescription = form.longDescription.value;
           const photoUrl = form.photoUrl.value;
           const updateBlog = {
             title,
             category,
             date,
-            short_description,
-            long_description,
+            shortDescription,
+            longDescription,
             photoUrl,
           };
           console.log(updateBlog);
@@ -33,12 +33,12 @@ const UpdateBlogs = () => {
               headers:{
                   'content-type': 'application/json'
               },
-              body:JSON.stringify(newBlog)
+              body:JSON.stringify(updateBlog)
           })
           .then(res => res.json())
           .then(data => {
               console.log(data)
-              if(data.insertedId){
+              if(data.modifiedCount > 0){
                   Swal.fire({
                       title: "Good job!",
                       text: "Blog Updated Successfully!",
@@ -49,7 +49,7 @@ const UpdateBlogs = () => {
         };
 
 const blog = useLoaderData();
-const { _id, title, photoUrl, short_description, long_Description,category ,date} = blog;
+const { _id, title, photoUrl, shortDescription, longDescription,category ,date} = blog;
 
     return (
         <div>
@@ -109,8 +109,8 @@ l</option>
             </label>
             <label className="input-group">
               <input
-              defaultValue={short_description}
-                name="short_description"
+              defaultValue={shortDescription}
+                name="shortDescription"
                 type="text"
                 placeholder="Short Description"
                 className="input input-bordered w-full"
@@ -123,8 +123,8 @@ l</option>
             </label>
             <label className="input-group">
               <input
-              defaultValue={long_Description}
-                name="long_description"
+              defaultValue={longDescription}
+                name="longDescription"
                 type="text"
                 placeholder="Long Description"
                 className="input input-bordered w-full"
@@ -165,7 +165,7 @@ l</option>
         <input
           className="btn btn-block bg-purple-400"
           type="submit"
-          value="update Blog"
+          value="updateBlog"
         />
       </form>
     </div>

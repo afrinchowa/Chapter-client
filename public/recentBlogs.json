@@ -3,48 +3,48 @@
     
       "title": "Exploring Ancient Ruins",
       "image": "https://i.ibb.co/8B4YMMd/img-5.jpg",
-      "short_description": "Journey back in time to unravel the mysteries of ancient civilizations.",
-      "long_description": "Embark on an archaeological adventure to uncover the secrets of long-lost civilizations. From the majestic pyramids of Egypt to the enigmatic stone circles of Stonehenge, our exploration of ancient ruins will transport you to a bygone era.",
+      "shortDescription": "Journey back in time to unravel the mysteries of ancient civilizations.",
+      "longDescription": "Embark on an archaeological adventure to uncover the secrets of long-lost civilizations. From the majestic pyramids of Egypt to the enigmatic stone circles of Stonehenge, our exploration of ancient ruins will transport you to a bygone era.",
       "category": "History & Archaeology"
     },
     {
    
       "title": "Mastering the Art of Photography",
       "image": "https://i.ibb.co/kBCfrBC/img-7.jpg",
-      "short_description": "Capture moments that last a lifetime with expert photography tips.",
-      "long_description": "Dive into the world of photography and learn how to create stunning visual stories. Our guide covers essential techniques, from composition and lighting to post-processing, helping you take your photography to the next level.",
+      "shortDescription": "Capture moments that last a lifetime with expert photography tips.",
+      "longDescription": "Dive into the world of photography and learn how to create stunning visual stories. Our guide covers essential techniques, from composition and lighting to post-processing, helping you take your photography to the next level.",
       "category": "Art & Photography"
     },
     {
       
       "title": "Healthy Eating: A Balanced Approach",
       "image": "https://i.ibb.co/JRpnwn0/img-14.jpg",
-      "short_description": "Discover the keys to maintaining a balanced diet and a healthier lifestyle.",
-      "long_description": "Eating healthy doesn't have to be complicated. Explore the principles of balanced nutrition and lifestyle choices that can lead to a happier, healthier you. Let's make wellness a way of life.",
+      "shortDescription": "Discover the keys to maintaining a balanced diet and a healthier lifestyle.",
+      "longDescription": "Eating healthy doesn't have to be complicated. Explore the principles of balanced nutrition and lifestyle choices that can lead to a happier, healthier you. Let's make wellness a way of life.",
       "category": "Health & Nutrition"
     },
     {
      
       "title": "Wanderlust: The Joy of Solo Travel",
       "image": "https://i.ibb.co/hXxf8kd/img-20.jpg",
-      "short_description": "Embrace the world and discover the freedom of solo travel.",
-      "long_description": "Solo travel is a transformative experience. This blog post is a guide to the joys and practicalities of traveling alone. Uncover the thrill of going on an adventure with no one but yourself for company.",
+      "shortDescription": "Embrace the world and discover the freedom of solo travel.",
+      "longDescription": "Solo travel is a transformative experience. This blog post is a guide to the joys and practicalities of traveling alone. Uncover the thrill of going on an adventure with no one but yourself for company.",
       "category": "Travel"
     },
     {
       
       "title": "The Power of Renewable Energy",
       "image": "https://i.ibb.co/CnPC0cz/img-11.jpg",
-      "short_description": "Explore the sustainable solutions of renewable energy sources.",
-      "long_description": "As we navigate a changing world, renewable energy is at the forefront of environmental solutions. This post delves into the various forms of renewable energy, their benefits, and their potential to reshape our future for the better.",
+      "shortDescription": "Explore the sustainable solutions of renewable energy sources.",
+      "longDescription": "As we navigate a changing world, renewable energy is at the forefront of environmental solutions. This post delves into the various forms of renewable energy, their benefits, and their potential to reshape our future for the better.",
       "category": "Environment & Sustainability"
     },
     {
      
       "title": "Culinary Adventures: A Tour of Regional Cuisines",
       "image": "https://i.ibb.co/sQ5T0qQ/img-8.jpg",
-      "short_description": "Savor the diversity of flavors from around the world.",
-      "long_description": "Embark on a culinary journey to explore the rich and diverse cuisines of different regions. From the aromatic spices of Indian cuisine to the hearty comfort foods of Southern America, this post is a culinary adventure for your taste buds.",
+      "shortDescription": "Savor the diversity of flavors from around the world.",
+      "longDescription": "Embark on a culinary journey to explore the rich and diverse cuisines of different regions. From the aromatic spices of Indian cuisine to the hearty comfort foods of Southern America, this post is a culinary adventure for your taste buds.",
       "category": "Food & Cooking"
     }
   ]
