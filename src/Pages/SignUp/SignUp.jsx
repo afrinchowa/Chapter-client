@@ -3,29 +3,50 @@ import img from "../../assets/login.svg";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
   const handleSignup = (event) => {
     event.preventDefault();
 
     // get field values
-    const name =event.target.name.value;
-    const photoURL =event.target.photoURL.value;
-    const email =event.target.email.value;
-    const password =event.target.password.value;
-
+    const name = event.target.name.value;
+    const photoURL = event.target.photoURL.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
     // validation
-    if(password.length < 6){
-toast.error('Password must be at least 6 Charecters');
+    // Check if the password contains at least one alphabet character (a-zA-Z)
+    if (!/[a-zA-Z]/.test(password)) {
+      return Swal.fire("password need at least 1 alphabet");
     }
 
-    // creating a new user 
-    createUser(email,password)
-    .then(res => console.log(res.user))
-   .catch(error  => console.log(error))
+    // Check if the password contains at least one symbol character
+    if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+      return Swal.fire("password need at least 1 symbol");
+    }
+
+    // // validation
+    if(password.length < 6){
+      return Swal.fire("Password must be at least 6 Charecters  ");
+    }
+    // // validation
+    if(!/0-9/.test(password)){
+      return Swal.fire("Password must be at least 1 neumeric number  ");
+    }
 
 
+    createUser(email, password)
+      .then(() => {
+        Swal.fire("successfully singUp");
+      })
+      .catch((error) => {
+        Swal.fire(error.message);
+      });
   };
+  // creating a new user
+  //   createUser(email,password)
+  //   .then(res => console.log(res.user))
+  //  .catch(error  => console.log(error))
 
   const { createUser } = useAuth();
 

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import img from "../../assets/login.svg";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import useAuth from "../../hooks/useAuth";
-import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 const Login = () => {
   const handleLogin = (event) => {
     event.preventDefault();
@@ -10,15 +10,35 @@ const Login = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
 
+
+
     // validation
-    if (password.length < 6) {
-      toast.error("Password must be at least 6 Charecters ,and contain special charecter,capital letter and neumeric number");
+    // Check if the password contains at least one alphabet character (a-zA-Z)
+    if (!/[a-zA-Z]/.test(password)) {
+      return Swal.fire("password need at least 1 alphabet");
+    }
+
+    // Check if the password contains at least one symbol character
+    if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+      return Swal.fire("password need at least 1 symbol");
+          }
+    // // validation
+    if(password.length < 6){
+      return Swal.fire("Password must be at least 6 Charecters  ");
+    }
+    // // validation
+    if(!/0-9/.test(password)){
+      return Swal.fire("Password must be at least 1 neumeric number  ");
     }
 
     // creating a new user
     signin(email, password)
-      .then((res) => console.log(res.user))
-      .catch((error) => console.log(error));
+      .then(() =>{
+        Swal.fire("successfully singin")
+      })
+      .catch((error) =>{
+        Swal.fire(error.message)
+      });
   };
 
   const { signin } = useAuth();
