@@ -5,7 +5,7 @@
 // const WishList = ({blog}) => {
 //    const {user}= useContext(AuthContext);
 // const [wishlist,setWishlist] = useState([]);
-//    const url = `http://localhost:5000/blog?email=${user.email}`;
+//    const url = `https://chapter-server.vercel.app/blog?email=${user.email}`;
 //    useEffect(() => {
 //     fetch(url)
 //     .then(res => res.json())

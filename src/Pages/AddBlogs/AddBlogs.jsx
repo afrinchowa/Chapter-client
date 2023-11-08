@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const AddBlogs = () => {
   const handleAddBlog = (event) => {
@@ -22,24 +22,27 @@ const AddBlogs = () => {
     console.log(newBlog);
 
     // send data to the server
-    fetch('http://localhost:5000/blog',{
-        method:'POST',
-        headers:{
-            'content-type': 'application/json'
+    fetch(
+      "https://chapter-server.vercel.app/blog",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
         },
-        body:JSON.stringify(newBlog)
-    })
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        if(data.insertedId){
-            Swal.fire({
-                title: "Good job!",
-                text: "Blog Added Successfully!",
-                icon: "success"
-              });
+        body: JSON.stringify(newBlog),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Good job!",
+            text: "Blog Added Successfully!",
+            icon: "success",
+          });
         }
-    })
+      });
   };
 
   return (
@@ -72,19 +75,27 @@ const AddBlogs = () => {
                 placeholder="Category"
                 className="input input-bordered w-full"
               /> */}
-              <select  className='input input-bordered w-full ' name="category" id='blogs'>
+              <select
+                className="input input-bordered w-full "
+                name="category"
+                id="blogs"
+              >
                 <option value=""> </option>
                 <option value="Fitness"> Fitness</option>
                 <option value="Travel"> Travel</option>
                 <option value="Photography"> Photography</option>
                 <option value="Health & Wellness"> Health & Wellness</option>
                 <option value="Home Improvement"> Home Improvement</option>
-                <option value="Science & Environment">Science & Environment</option>
+                <option value="Science & Environment">
+                  Science & Environment
+                </option>
                 <option value="Technology"> Technology</option>
-                <option value="Writing & Literature"> Writing & Literature</option>
+                <option value="Writing & Literature">
+                  {" "}
+                  Writing & Literature
+                </option>
                 <option value="Food & Cooking"> Food & Cooking</option>
                 <option value="History"> History</option>
-                
               </select>
             </label>
           </div>

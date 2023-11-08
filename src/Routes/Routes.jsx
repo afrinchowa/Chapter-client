@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: '/pageDetails/:id',
         element: <PageDetails></PageDetails>,
-        loader:({params}) => fetch(`http://localhost:5000/blog/${params.id}`)
+        loader:({params}) => fetch(`https://chapter-server.vercel.app/blog/${params.id}`)
       },
     ],
   },
@@ -47,12 +47,12 @@ const router = createBrowserRouter([
   {
     path: "/allBlogs",
     element: <AllBlogs></AllBlogs>,
-    loader: () => fetch("http://localhost:5000/blog"),
+    loader: () => fetch("https://chapter-server.vercel.app/blog"),
   },
   {
     path: "/allBlogs/updateBlogs/:id",
     element: <PrivateRoute><UpdateBlogs></UpdateBlogs></PrivateRoute>,
-    loader:({params}) =>fetch(`http://localhost:5000/blog/${params.id}`)
+    loader:({params}) =>fetch(`https://chapter-server.vercel.app/blog/${params.id}`)
   },
   {
     path: "/featuredBlogs",
