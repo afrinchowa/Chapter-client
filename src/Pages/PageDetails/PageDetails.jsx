@@ -12,7 +12,7 @@ const PageDetails = () => {
     category,
     date,
   } = blog;
-
+console.log(blog)
   const [comment, setComment] = useState("");
   const [comments,setComments] = useState([]);
 const onClickHandler = () =>{

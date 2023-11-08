@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 
 const RecentBlogCard = ({ blog }) => {
-  const { title, image, shortDescription, category } = blog;
+  const {_id, title, photoUrl, shortDescription, category } = blog;
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
-        <img src={image} alt="Photo" className="rounded-xl" />
+        <img src={photoUrl} alt="Photo" className="rounded-xl" />
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title font-bold text-purple-800">{title}</h2>
         <p>{shortDescription}</p>
         <h3 className="text-xl font-semibold text-purple-600">{category}</h3>
         <div className="card-actions">
-        <Link to="/pageDetails">
+        <Link to={`/pageDetails/${_id}`}>
         <button className="btn bg-purple-400">Details</button></Link>
           <button className="btn bg-purple-400">
             <svg

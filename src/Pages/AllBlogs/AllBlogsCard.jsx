@@ -18,7 +18,7 @@ const AllBlogsCard = ({blog}) => {
           <button className="btn bg-purple-400">Details</button></Link>
        
           <Link to={`updateBlogs/${_id}`}><button className="btn bg-purple-400">Update</button></Link>
-            <Link to={`/wishList/${_id}`}>
+            <Link to="/wishList">
             <button className="btn bg-purple-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -11,7 +11,7 @@ import UpdateBlogs from "../Pages/UpdateBlogs/UpdateBlogs";
 import AllBlogs from "../Pages/AllBlogs/AllBlogs";
 import FeaturedBlogs from "../Pages/FeaturedBlogs/FeaturedBlogs";
 import PrivateRoute from "./PrivateRoute";
-// import WishList from "../Pages/WishList/WishList";
+
 
 const router = createBrowserRouter([
   {
@@ -22,15 +22,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Home></Home>
       },
       {
         path: "/login",
-        element: <Login></Login>,
+        element: <Login></Login>
       },
       {
         path: "/signUp",
-        element: <SignUp></SignUp>,
+        element: <SignUp></SignUp>
       },
       {
         path: '/pageDetails/:id',
@@ -41,13 +41,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/addBlog",
-    element: <AddBlogs></AddBlogs>,
+    element: <AddBlogs></AddBlogs>
   },
 
   {
     path: "/allBlogs",
     element: <AllBlogs></AllBlogs>,
-    loader: () => fetch("https://chapter-server.vercel.app/blog"),
+    loader: () => fetch("https://chapter-server.vercel.app/blog")
   },
   {
     path: "/allBlogs/updateBlogs/:id",
@@ -56,12 +56,9 @@ const router = createBrowserRouter([
   },
   {
     path: "/featuredBlogs",
-    element: <PrivateRoute><FeaturedBlogs></FeaturedBlogs></PrivateRoute>,
+    element: <PrivateRoute><FeaturedBlogs></FeaturedBlogs></PrivateRoute>
   },
-  // {
-  //   path: "/wishList",
-  //   element: <WishList></WishList>,
-  // },
+ 
 ]);
 
 export default router;
