@@ -6,7 +6,7 @@ const Footer = () => {
         <p className="font-bold">
          CHAPTER
           <br />
-        
+          Providing reliable tech since 1992
         </p>
       </aside>
       <nav>
